@@ -15,7 +15,7 @@ tropxz/jimmy | reconfiguring the ui
 local Release = "Astral Style 😎"
 local NotificationDuration = 6.5
 local RayfieldFolder = "Astral/UiStuff"
-local ConfigurationFolder = "Astral/Config"
+local ConfigurationFolder = "Astral/Configs"
 local ConfigurationExtension = ".hotdaddyAstral"
 
 local RayfieldLibrary = {
@@ -1203,8 +1203,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end
 		end
 
-
-
 		TabPage.Parent = Elements
 		if not FirstTab then
 			Elements.UIPageLayout.Animated = false
@@ -1270,8 +1268,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 				TweenService:Create(Elements, TweenInfo.new(0.8, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 475,0, 366)}):Play()
 			end
 
-			local yourmotherissohot = Instance.new("UIPadding", Elements)
-			yourmotherissohot.PaddingTop = Udim.new(0.5, 0)
 		end)
 
 		local Tab = {}

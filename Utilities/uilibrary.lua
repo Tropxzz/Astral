@@ -1271,7 +1271,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end
 
 			local yourmotherissohot = Instance.new("UIPadding", Elements)
-			yourmotherissohot.PaddingTop = UDim2.new(0.2, 0)
+			yourmotherissohot.PaddingTop = Udim.new(0.5, 0)
 		end)
 
 		local Tab = {}

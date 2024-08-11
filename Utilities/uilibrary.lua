@@ -6,7 +6,7 @@ by Sirius
 shlex | Designing + Programming
 iRay  | Programming
 
-tropxz/jimmy | reconfiguring the ui 
+tropxz/jimmy | reconfiguring the ui 12312312313123123123123
 
 ]]
 
@@ -134,14 +134,14 @@ if gethui then
 	for _, Interface in ipairs(gethui():GetChildren()) do
 		if Interface.Name == Rayfield.Name and Interface ~= Rayfield then
 			Interface.Enabled = false
-			Interface.Name = "Rayfield-Old"
+			Interface.Name = "Astral-Old"
 		end
 	end
 else
 	for _, Interface in ipairs(CoreGui:GetChildren()) do
 		if Interface.Name == Rayfield.Name and Interface ~= Rayfield then
 			Interface.Enabled = false
-			Interface.Name = "Rayfield-Old"
+			Interface.Name = "Astral-Old"
 		end
 	end
 end
@@ -252,7 +252,7 @@ local function LoadConfiguration(Configuration)
 				end    
 			end)
 		else
-			RayfieldLibrary:Notify({Title = "Flag Error", Content = "Rayfield was unable to find '"..FlagName.. "'' in the current script"})
+			RayfieldLibrary:Notify({Title = "Flag Error", Content = "Astral was unable to find '"..FlagName.. "'' in the current script"})
 		end
 	end
 end
@@ -531,7 +531,7 @@ function RayfieldLibrary:Notify(NotificationSettings)
 				NewAction.MouseButton1Click:Connect(function()
 					local Success, Response = pcall(Action.Callback)
 					if not Success then
-						print("Rayfield | Action: "..Action.Name.." Callback Error " ..tostring(Response))
+						print("Astral | Action: "..Action.Name.." Callback Error " ..tostring(Response))
 					end
 					ActionCompleted = true
 				end)
@@ -637,7 +637,7 @@ end
 
 function Hide()
 	Debounce = true
-	RayfieldLibrary:Notify({Title = "Interface Hidden", Content = "Astral has been closed repon with RightShift.", Duration = 7})
+	RayfieldLibrary:Notify({Title = "Interface Hidden", Content = "Astral has been closed; repon with RightShift.", Duration = 7})
 	TweenService:Create(Main, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 470, 0, 400)}):Play()
 	TweenService:Create(Main.Topbar, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {Size = UDim2.new(0, 470, 0, 45)}):Play()
 	TweenService:Create(Main, TweenInfo.new(0.5, Enum.EasingStyle.Quint), {BackgroundTransparency = 1}):Play()
@@ -2213,7 +2213,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Toggle, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
 					TweenService:Create(Toggle.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Transparency = 1}):Play()
 					Toggle.Title.Text = "Callback Error"
-					print("Rayfield | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
+					print("Astral | "..ToggleSettings.Name.." Callback Error " ..tostring(Response))
 					wait(0.5)
 					Toggle.Title.Text = ToggleSettings.Name
 					TweenService:Create(Toggle, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -2328,7 +2328,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 								TweenService:Create(Slider, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
 								TweenService:Create(Slider.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Transparency = 1}):Play()
 								Slider.Title.Text = "Callback Error"
-								print("Rayfield | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
+								print("Astral | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
 								wait(0.5)
 								Slider.Title.Text = SliderSettings.Name
 								TweenService:Create(Slider, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -2355,7 +2355,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Slider, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
 					TweenService:Create(Slider.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Transparency = 1}):Play()
 					Slider.Title.Text = "Callback Error"
-					print("Rayfield | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
+					print("Astral | "..SliderSettings.Name.." Callback Error " ..tostring(Response))
 					wait(0.5)
 					Slider.Title.Text = SliderSettings.Name
 					TweenService:Create(Slider, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
@@ -2476,7 +2476,7 @@ function RayfieldLibrary:LoadConfiguration()
 		pcall(function()
 			if isfile(ConfigurationFolder .. "/" .. CFileName .. ConfigurationExtension) then
 				LoadConfiguration(readfile(ConfigurationFolder .. "/" .. CFileName .. ConfigurationExtension))
-				RayfieldLibrary:Notify({Title = "Configuration Loaded", Content = "The configuration file for this script has been loaded from a previous session"})
+				RayfieldLibrary:Notify({Title = "Configuration Loaded", Content = "The configuration file for Astral has been loaded from a previous session"})
 			end
 		end)
 	end
